@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--URL Session View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="URLSessionViewController" customModule="urlStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8b7-MP-Xsg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ArticleCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="100" id="fqP-69-Oft" customClass="ArticleTableViewCell" customModule="urlStudy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fqP-69-Oft" id="nnW-KY-vSA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4H-5h-bim">
+                                                    <rect key="frame" x="30" y="21" width="274" height="58"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Apu-39-732">
+                                                    <rect key="frame" x="314" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="8F6-Jy-Qvs"/>
+                                                        <constraint firstAttribute="width" constant="100" id="sbm-X6-oTY"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="x4H-5h-bim" firstAttribute="top" secondItem="nnW-KY-vSA" secondAttribute="topMargin" constant="10" id="9BT-1O-7JP"/>
+                                                <constraint firstItem="x4H-5h-bim" firstAttribute="leading" secondItem="nnW-KY-vSA" secondAttribute="leadingMargin" constant="10" id="AiV-jX-thp"/>
+                                                <constraint firstAttribute="bottom" secondItem="Apu-39-732" secondAttribute="bottom" id="XC2-aA-UYx"/>
+                                                <constraint firstItem="Apu-39-732" firstAttribute="top" secondItem="nnW-KY-vSA" secondAttribute="top" id="g8d-mP-95r"/>
+                                                <constraint firstItem="x4H-5h-bim" firstAttribute="centerY" secondItem="nnW-KY-vSA" secondAttribute="centerY" id="lJU-T7-8yZ"/>
+                                                <constraint firstItem="Apu-39-732" firstAttribute="leading" secondItem="x4H-5h-bim" secondAttribute="trailing" constant="10" id="ngZ-LV-pTq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Apu-39-732" secondAttribute="trailing" id="zeW-2J-8Mp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headLineImage" destination="Apu-39-732" id="cl9-h8-jR0"/>
+                                            <outlet property="headLineText" destination="x4H-5h-bim" id="bSi-Bn-zCV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8b7-MP-Xsg" secondAttribute="bottom" id="F7E-id-J1K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8b7-MP-Xsg" secondAttribute="trailing" id="aRY-zj-Qwr"/>
+                            <constraint firstItem="8b7-MP-Xsg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fu8-cs-cRP"/>
+                            <constraint firstItem="8b7-MP-Xsg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ryQ-Kf-ic1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="8b7-MP-Xsg" id="1wZ-WQ-iK5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2572" y="-484"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="qUC-6o-9ze">
+            <objects>
+                <viewController id="0uj-fX-hTB" customClass="DetailViewController" customModule="urlStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ma7-am-zkH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTP-gd-y63">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1DR-0J-GJc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1DR-0J-GJc" firstAttribute="bottom" secondItem="aTP-gd-y63" secondAttribute="bottom" id="32t-qP-EcJ"/>
+                            <constraint firstItem="1DR-0J-GJc" firstAttribute="trailing" secondItem="aTP-gd-y63" secondAttribute="trailing" id="CUS-rg-6Nk"/>
+                            <constraint firstItem="aTP-gd-y63" firstAttribute="leading" secondItem="1DR-0J-GJc" secondAttribute="leading" id="PXU-ug-haI"/>
+                            <constraint firstItem="aTP-gd-y63" firstAttribute="top" secondItem="1DR-0J-GJc" secondAttribute="top" id="aXy-t3-b1K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="aTP-gd-y63" id="tJt-rb-1NO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="28P-kp-Rhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1825" y="-214"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
